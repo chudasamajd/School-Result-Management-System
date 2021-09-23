@@ -1,0 +1,580 @@
+<html>
+    <head>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color: whitesmoke;
+        }    
+        #part1{
+            height: 100vh;
+            width: 100%;
+            background-image: url(bg.png);
+            background-size: 100% 100%;
+        }
+        #pencil{
+            position: absolute;
+            top:50%;
+            left: 20%;
+            transform: translate(-50%,-50%) scale(1);
+            animation: anim 1s;
+        }
+        @-webkit-keyframes anim{
+            0%{transform: translate(-50%,-50%) scale(1);}
+            25%{transform: translate(-50%,-50%) scale(1.1);}
+            50%{transform: translate(-50%,-50%) scale(1);}
+            75%{transform: translate(-50%,-50%) scale(1.1);}
+            100%{transform: translate(-50%,-50%) scale(1);}
+        }
+        #menu{
+            height: 50px;
+            width: 85%;
+            background-color: white;
+            position: absolute;
+            top:10%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #logo{
+            float: left;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        #submenu{
+            float: right;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        ul li{
+            float: left;
+            margin-left: 30px;
+            font-family: arial;
+            font-size: 14px;
+            margin-top: 16px;
+        }
+        ul li:nth-child(5){
+            margin-right: 30px;
+        }
+        #text{
+            position: absolute;
+            top:50%;
+            right: 15%;
+            transform: translateY(-50%);
+        }
+        #text1{
+            font-family:cursive;
+            font-size: 40px;
+            color:white;
+        }
+        #text2{
+            font-family:arial;
+            font-size: 12px;
+            line-height: 20px;
+            color:white;
+            position: absolute;
+            right: 0%;
+        }
+        #learnmore{
+            height: 35px;
+            width: 150px;
+            background-color: white;
+            border:1px solid white;
+            text-align: center;
+            line-height: 35px;
+            font-family: arial;
+            color: black;
+            font-size: 12px;
+            position: absolute;
+            margin-top: 30px;
+            right: 0%;
+        }
+        
+        #part2{
+            height: 100vh;
+            width: 100%;
+            background-color: whitesmoke;
+        }
+        .heading1{
+            font-family: arial;
+            font-size: 13px;
+            font-weight: bold;
+            color:black;
+            text-align: center;
+            padding-top: 70px;
+        }
+        .heading2{
+            font-family: arial;
+            font-size: 16px;
+            font-weight: bold;
+            color:black;
+            text-align: center;
+            padding-top: 5px;
+        }
+        #features{
+            height: 400px;
+            width: 100%;
+            margin-top: 50px;
+        }
+        .circle{
+            height: 100px;
+            width: 100px;
+            background-image: url(bg.png);
+            //background-size: 100% 100%;
+            border-radius: 50%;
+        }
+        .circle img{
+            position: relative;
+            top:50%;
+            left: 25%;
+            transform: translate(-50%,-50%);
+        }
+        .topic{
+            font-family: arial;
+            font-size: 12px;
+            font-weight: bold;
+            color:black;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .content{
+            font-family: arial;
+            font-size: 12px;
+            color:black;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #bottomimg{
+            position: absolute;
+            bottom: -100%;
+        }
+        #bottomimg2{
+            position: absolute;
+            bottom: -100%;
+            right: 0;
+        }
+        #features table tr td{
+            border-radius: 3px;
+            padding: 5px;
+            transition: all 1s;
+        }
+        #features table tr td:hover{
+            box-shadow: 0px 0px 5px rgba(0,0,0,.12);
+        }
+        
+        #part3{
+            height: 100vh;
+            width: 100%;
+            background-color:white;
+        }
+        #features2{
+            height: 400px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        #square1{
+            height: 150px;
+            width: 150px;
+            background-color: #3fc8db;
+            text-align: center;
+            box-shadow: 7px 7px 0px rgba(0,0,0,.1);
+        }
+        #square2{
+            height: 150px;
+            width: 150px;
+            background-color: #f2cd26;
+            text-align: center;
+            box-shadow: 7px 7px 0px rgba(0,0,0,.1);
+        }
+        #square3{
+            height: 150px;
+            width: 150px;
+            background-color: #f24646;
+            text-align: center;
+            box-shadow: 7px 7px 0px rgba(0,0,0,.1);
+        }
+        #square4{
+            height: 150px;
+            width: 150px;
+            background-color: #3598db;
+            text-align: center;
+            box-shadow: 7px 7px 0px rgba(0,0,0,.1);
+        }
+        .squaretext{
+            font-family: arial;
+            font-size: 12px;
+            color: white;
+            font-weight: bold;
+            padding-top: 20px;
+            text-align: center;
+        }
+        .squareimg{
+            margin-top: 50px;
+        }
+        #bottomimg3{
+            position: absolute;
+            bottom: -200%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        #part4{
+            height: 100vh;
+            width: 100%;
+            background-color: whitesmoke;
+        }
+        #teachers{
+            margin-top: 30px;
+        }
+        #box1{
+            height: 280px;
+            width: 250px;
+            background-image: url(Teacher1.jpg);
+            background-size: 100% 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        #box1:hover{
+            cursor: pointer;
+        }
+        #box1:hover #teachername{
+            margin-left: 0px;
+        }
+        #box1:hover #teacherpost{
+            margin-left: 0px;
+        }
+        #box2{
+            height: 280px;
+            width: 250px;
+            background-image: url(Teacher2.jpg);
+            background-size: 100% 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        #box2:hover{
+            cursor: pointer;
+        }
+        #box2:hover #teachername{
+            margin-left: 0px;
+        }
+        #box2:hover #teacherpost{
+            margin-left: 0px;
+        }
+        #box3{
+            height: 280px;
+            width: 250px;
+            background-image: url(Teacher3.jpg);
+            background-size: 100% 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        #box3:hover{
+            cursor: pointer;
+        }
+        #box3:hover #teachername{
+            margin-left: 0px;
+        }
+        #box3:hover #teacherpost{
+            margin-left: 0px;
+        }
+        #teachername{
+            position: absolute;
+            margin-left:250px;
+            height: 40px;
+            width: 250px;
+            background-color: white;
+            text-align: center;
+            line-height: 40px;
+            font-family:arial;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 200px;
+            transition: all .5s;
+        }
+        #teacherpost{
+            position: absolute;
+            margin-left:-250px;
+            height: 40px;
+            width: 250px;
+            background-color: #4a968d;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            font-family:arial;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 240px;
+            transition: all .5s;
+        }
+        #bottomimg4{
+            position: absolute;
+            bottom: -330%; 
+        }
+        #part5{
+            background-color: #48948b;
+            padding: 200px 0;
+            margin-top: 200px;
+            transform: skew(0deg, -10deg) translateY(-120px);
+            background-image: url(bg.png);
+            background-size: 100% 100%;
+        }
+        #wantmoreinfo{
+            font-family: arial;
+            font-weight: bold;
+            font-size: 30px;
+            color:white;
+            padding: 0px 200px;
+            transform: skew(0deg,10deg);
+        }
+        #useremail{
+            height: 50px;
+            width: 300px;
+            border: none;
+            border: 1px solid rgba(0,0,0,.3);
+            border-radius: 40px;
+            padding-left: 10px;
+            outline: none;
+        }
+        #sbmbtn{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: white;
+            text-align: center;
+            border: none;
+            outline: none;
+            font-family: arial;
+            font-size: 12px;
+        }
+        #bottommenu{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+        }
+        #bottomimg5{
+            position: absolute;
+            right: 0;
+            top:470%;
+            transform: rotate(180deg);
+            z-index: -1;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+    </head>
+    <body>
+        <div id="part1">
+            <div id="menu">
+                <div id="logo"><img src="Logo.png" height="25px" width="120px"/></div>
+                <div id="submenu">
+                    <ul>
+                        <li><a href="Home.html">HOME</a></li>
+                        <li><a href="About%20Us.php">ABOUT US</a></li>
+                        <li><a href="Events.php">EVENTS</a></li>
+                        <li><a href="Teachers.php">TEACHERS</a></li>
+                        <li><a href="Contact%20Us.php">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="pencil">
+                <img src="kredki.png"/>
+            </div>
+            <div id="text">
+                <div id="text1">PAATHSHAALA EDUCATION</div>
+                <div id="text2">Education is learning what you didn't even know you didn't know.</div>
+                <div id="learnmore">LEARN MORE</div>
+            </div>
+        </div>
+        
+        <div id="part2">
+            <div class="heading1">
+                AWESOME FEATURES
+            </div>
+            <div class="heading2">
+                WE OFFER STUDENTS FOR BETTER LEARNING
+            </div>
+            <div id="features">
+                <table border="0" align="center" cellspacing="20">
+                    <tr align="center">
+                        <td width="200px">
+                            <div class="circle">
+                                <img src="Education.png"/>
+                            </div>
+                            <div class="topic">
+                                AWESOME COURSES
+                            </div>
+                            <hr size="1" width="40px" color="gray"/>
+                            <div class="content">
+                                We provide more than 12 courses in our institute. All the courses are approved by government.
+                            </div>
+                        </td>
+                        
+                        <td width="200px" >
+                            <div class="circle">
+                                <img src="Teachers.png"/>
+                            </div>
+                            <div class="topic">
+                                EXPERIENCED TEACHERS
+                            </div>
+                            <hr size="1" width="40px" color="gray"/>
+                            <div class="content">
+                                All teachers are 7+ years experience. For each subject qualified teacher is available.
+                            </div>
+                        </td>
+                        
+                        <td width="200px" >
+                            <div class="circle">
+                                <img src="Practical.png" width="42%"/>
+                            </div>
+                            <div class="topic">
+                                PRACTICAL CLASSES
+                            </div>
+                            <hr size="1" width="40px" color="gray"/>
+                            <div class="content">
+                                Large classroom with AC, comfortable siting facility and also computer lab.
+                            </div>
+                        </td>
+                        
+                        <td width="200px" >
+                            <div class="circle">
+                                <img src="Certificate.png"/>
+                            </div>
+                            <div class="topic">
+                                VALIDATE CERTIFICATE
+                            </div>
+                            <hr size="1" width="40px" color="gray"/>
+                            <div class="content">
+                                We provide certificate for all the courses. All the certificate are approved by government.
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="bottomimg">
+                <img src="Bottomimg1.png" />
+            </div>
+            <div id="bottomimg2">
+                <img src="Bottomimg2.png" />
+            </div>
+        </div>
+        
+        <div id="part3">
+            <div class="heading1">
+                WHY CHOOSE US
+            </div>
+            <div class="heading2">
+                WE HAVE UNIQUE FACILITIES FOR STUDENTS
+            </div>
+            <div id="features2">
+                <table border="0" align="center" cellspacing="30px">
+                    <tr>
+                        <td>
+                            <div id="square1">
+                                <img src="Community.png" class="squareimg"/>
+                                <div class="squaretext">BEST COMMUNITIES</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="square2">
+                                <img src="Library.png" class="squareimg"/>
+                                <div class="squaretext">LIBRARY</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="square3">
+                                <img src="Online%20Solution.png" class="squareimg"/>
+                                <div class="squaretext">ONLINE SOLUTION</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="square4">
+                                <img src="Store.png" class="squareimg"/>
+                                <div class="squaretext">FOOD | BOOK STORE</div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="bottomimg3">
+                <img src="School.png" width="450px"/>
+            </div>
+        </div>
+        
+        <div id="part4">
+            <div class="heading1">
+                OUR TEACHERS
+            </div>
+            <div class="heading2">
+                WE HAVE SKILLED & EXPERIENCED TEACHERS
+            </div>
+            <div id="teachers">
+                <table border="0" align="center" cellspacing="40px">
+                    <tr>
+                        <td>
+                            <div id="box1">
+                                <div id="teachername">TEACHER NAME</div>
+                                <div id="teacherpost">SCIENCE TEACHER</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="box2">
+                                <div id="teachername">TEACHER NAME</div>
+                                <div id="teacherpost">MATHS TEACHER</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="box3">
+                                <div id="teachername">TEACHER NAME</div>
+                                <div id="teacherpost">HISTORY TEACHER</div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="bottomimg4">
+                <img src="Bottomimg3.png"/>
+            </div>
+        </div>
+        
+        <div id="part5">
+            <div id="wantmoreinfo">
+                <table border="0" align="center">
+                    <tr>
+                        <td width="400px">
+                            <font face="arial" color="white" size="5"><b>Want More Information?</b></font><br><br>
+                            <input type="text" placeholder="Enter email address" id="useremail"/>
+                            <input type="submit" value="Sign In" id="sbmbtn"/>
+                        </td>
+                        <td valign="bottom">
+                            <img src="Logo2.png" width="150px"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <div id="bottommenu">
+                                <ul>
+                                    <li>HOME</li>
+                                    <li>ABOUT US</li>
+                                    <li>EVENTS</li>
+                                    <li>TEACHERS</li>
+                                    <li>CONTACT</li>
+                                </ul>
+                </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="bottomimg5">
+            <img src="Bottomimg5.png"/>
+        </div>
+    </body>
+</html>
